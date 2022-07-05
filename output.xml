@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20220702 13:22:11.746" rpa="false" schemaversion="3">
+<suite id="s1" name="Bug" source="C:\Users\bruno\OneDrive\Área de Trabalho\Programação\Digital House\QA Teste\BugBankTest\bug.robot">
+<test id="s1-t1" name="Criação de conta e login na BugBank" line="9">
+<kw name="Abrir o Navegador" library="bug" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${SITE}</arg>
+<arg>${NAVEGADOR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220702 13:22:12.174" level="INFO">Opening browser 'Chrome' to base url 'https://bugbank.netlify.app'.</msg>
+<status status="PASS" starttime="20220702 13:22:12.171" endtime="20220702 13:22:17.184"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220702 13:22:17.184" endtime="20220702 13:22:17.313"/>
+</kw>
+<status status="PASS" starttime="20220702 13:22:12.168" endtime="20220702 13:22:17.313"/>
+</kw>
+<kw name="Criar conta e logar" library="bug">
+<kw name="Wait and Click" library="bug">
+<arg>${REGISTRAR}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<arg>15</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220702 13:22:17.316" endtime="20220702 13:22:17.387"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220702 13:22:17.388" level="INFO">Clicking element 'xpath=//*[@id="__next"]/div/div[2]/div/div[1]/form/div[3]/button[2]'.</msg>
+<status status="PASS" starttime="20220702 13:22:17.387" endtime="20220702 13:22:17.484"/>
+</kw>
+<status status="PASS" starttime="20220702 13:22:17.315" endtime="20220702 13:22:17.485"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220702 13:22:22.493" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220702 13:22:17.485" endtime="20220702 13:22:22.493"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_EMAIL}</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220702 13:22:22.493" level="INFO">Typing text 'teste@hotmail.com' into text field 'xpath=//*[@id="__next"]/div/div[2]/div/div[2]/form/div[2]/input'.</msg>
+<status status="PASS" starttime="20220702 13:22:22.493" endtime="20220702 13:22:22.750"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_NOME}</arg>
+<arg>${NOME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220702 13:22:22.756" level="INFO">Typing text 'testing' into text field 'xpath=//*[@id="__next"]/div/div[2]/div/div[2]/form/div[3]/input'.</msg>
+<status status="PASS" starttime="20220702 13:22:22.752" endtime="20220702 13:22:22.954"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_SENHA}</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220702 13:22:22.955" level="INFO">Typing text 'teste456' into text field 'xpath=//*[@id="__next"]/div/div[2]/div/div[2]/form/div[4]/div/input'.</msg>
+<status status="PASS" starttime="20220702 13:22:22.954" endtime="20220702 13:22:23.228"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_CONFIRMAR_SENHA}</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220702 13:22:23.228" level="INFO">Typing text 'teste456' into text field 'xpath=//*[@id="__next"]/div/div[2]/div/div[2]/form/div[5]/div/input'.</msg>
+<status status="PASS" starttime="20220702 13:22:23.228" endtime="20220702 13:22:23.464"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CONTA_SALDO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220702 13:22:23.471" level="INFO">Clicking element 'xpath=//*[@id="toggleAddBalance"]'.</msg>
+<status status="PASS" starttime="20220702 13:22:23.466" endtime="20220702 13:22:23.602"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CONCLUIR_CADASTRO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220702 13:22:23.602" level="INFO">Clicking element 'xpath=//*[@id="__next"]/div/div[2]/div/div[2]/form/button'.</msg>
+<status status="PASS" starttime="20220702 13:22:23.602" endtime="20220702 13:22:23.731"/>
+</kw>
+<kw name="Wait and Click" library="bug">
+<arg>${FECHAR_POPUP}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<arg>15</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220702 13:22:23.733" endtime="20220702 13:22:24.107"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220702 13:22:24.112" level="INFO">Clicking element 'xpath=//*[@id="btnCloseModal"]'.</msg>
+<status status="PASS" starttime="20220702 13:22:24.109" endtime="20220702 13:22:24.279"/>
+</kw>
+<status status="PASS" starttime="20220702 13:22:23.731" endtime="20220702 13:22:24.279"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_EMAIL_LOGIN}</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220702 13:22:24.280" level="INFO">Typing text 'teste@hotmail.com' into text field 'xpath=//*[@id="__next"]/div/div[2]/div/div[1]/form/div[1]/input'.</msg>
+<status status="PASS" starttime="20220702 13:22:24.279" endtime="20220702 13:22:24.574"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_SENHA_LOGIN}</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220702 13:22:24.576" level="INFO">Typing text 'teste456' into text field 'xpath=//*[@id="__next"]/div/div[2]/div/div[1]/form/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20220702 13:22:24.574" endtime="20220702 13:22:24.784"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOGAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220702 13:22:24.784" level="INFO">Clicking element 'xpath=//*[@id="__next"]/div/div[2]/div/div[1]/form/div[3]/button[1]'.</msg>
+<status status="PASS" starttime="20220702 13:22:24.784" endtime="20220702 13:22:24.892"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220702 13:22:29.902" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220702 13:22:24.892" endtime="20220702 13:22:29.903"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Olá testing,</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220702 13:22:29.923" level="INFO">Current page contains text 'Olá testing,'.</msg>
+<status status="PASS" starttime="20220702 13:22:29.903" endtime="20220702 13:22:29.923"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Obrigado por escolher o nosso banco</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220702 13:22:29.935" level="INFO">Current page contains text 'Obrigado por escolher o nosso banco'.</msg>
+<status status="PASS" starttime="20220702 13:22:29.924" endtime="20220702 13:22:29.935"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Saldo em conta</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220702 13:22:29.946" level="INFO">Current page contains text 'Saldo em conta'.</msg>
+<status status="PASS" starttime="20220702 13:22:29.936" endtime="20220702 13:22:29.946"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>1.000,00</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220702 13:22:29.965" level="INFO">Current page contains text '1.000,00'.</msg>
+<status status="PASS" starttime="20220702 13:22:29.947" endtime="20220702 13:22:29.965"/>
+</kw>
+<status status="PASS" starttime="20220702 13:22:17.314" endtime="20220702 13:22:29.966"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220702 13:22:29.967" endtime="20220702 13:22:32.658"/>
+</kw>
+<status status="PASS" starttime="20220702 13:22:12.166" endtime="20220702 13:22:32.659"/>
+</test>
+<test id="s1-t2" name="Login" line="12">
+<kw name="Abrir o Navegador" library="bug" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${SITE}</arg>
+<arg>${NAVEGADOR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220702 13:22:32.661" level="INFO">Opening browser 'Chrome' to base url 'https://bugbank.netlify.app'.</msg>
+<status status="PASS" starttime="20220702 13:22:32.661" endtime="20220702 13:22:39.644"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220702 13:22:39.645" endtime="20220702 13:22:39.884"/>
+</kw>
+<status status="PASS" starttime="20220702 13:22:32.661" endtime="20220702 13:22:39.884"/>
+</kw>
+<kw name="Logar" library="bug">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_EMAIL_LOGIN}</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220702 13:22:39.892" level="INFO">Typing text 'teste@hotmail.com' into text field 'xpath=//*[@id="__next"]/div/div[2]/div/div[1]/form/div[1]/input'.</msg>
+<status status="PASS" starttime="20220702 13:22:39.892" endtime="20220702 13:22:40.209"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_SENHA_LOGIN}</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220702 13:22:40.211" level="INFO">Typing text 'teste456' into text field 'xpath=//*[@id="__next"]/div/div[2]/div/div[1]/form/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20220702 13:22:40.209" endtime="20220702 13:22:40.460"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOGAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220702 13:22:40.461" level="INFO">Clicking element 'xpath=//*[@id="__next"]/div/div[2]/div/div[1]/form/div[3]/button[1]'.</msg>
+<status status="PASS" starttime="20220702 13:22:40.461" endtime="20220702 13:22:40.589"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220702 13:22:45.601" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220702 13:22:40.589" endtime="20220702 13:22:45.601"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Usuário ou senha inválido.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220702 13:22:45.631" level="INFO">Current page contains text 'Usuário ou senha inválido.'.</msg>
+<status status="PASS" starttime="20220702 13:22:45.601" endtime="20220702 13:22:45.631"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Tente novamente ou verifique suas informações!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220702 13:22:45.654" level="INFO">Current page contains text 'Tente novamente ou verifique suas informações!'.</msg>
+<status status="PASS" starttime="20220702 13:22:45.632" endtime="20220702 13:22:45.654"/>
+</kw>
+<status status="PASS" starttime="20220702 13:22:39.891" endtime="20220702 13:22:45.654"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220702 13:22:45.655" endtime="20220702 13:22:48.445"/>
+</kw>
+<status status="PASS" starttime="20220702 13:22:32.660" endtime="20220702 13:22:48.445"/>
+</test>
+<status status="PASS" starttime="20220702 13:22:11.747" endtime="20220702 13:22:48.446"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Bug">Bug</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
